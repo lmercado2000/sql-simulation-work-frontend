@@ -32,6 +32,13 @@ export default function First() {
             <StudentItem name="cabbage" />
             <StudentItem name="peccary" />
             <StudentItem name="ostrich" />
+            <StudentItem name="cabbage white" />
+            <StudentItem name="eagle white" male />
+            <StudentItem name="herring" male />
+            <StudentItem name="shark" />
+            <StudentItem name="paz" />
+            <StudentItem name="eland" male />
+            <StudentItem name="skink" male />
           </ul>
         </div>
         <div class="student-picture">
