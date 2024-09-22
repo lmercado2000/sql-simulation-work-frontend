@@ -117,7 +117,7 @@ body {
 
             img {
                 width: 100%;
-                filter: blur(0.5px);
+                filter: blur(0.5px) sepia(1);
             }
         }
     }
