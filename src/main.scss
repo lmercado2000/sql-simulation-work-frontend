@@ -46,7 +46,6 @@ body {
         filter: blur(3px);
     }
 
-    display: flex;
 
 
     .bg-logo {
@@ -60,61 +59,65 @@ body {
         z-index: 0;
     }
 
-    .students-list {
-        margin: 100px;
+    .content-container {
         display: flex;
-        flex-direction: column;
-        font-family: 'JetBrains Mono', monospace;
-        width: 500px;
+        margin: 100px;
 
-        .header {
-            background-color: white;
-            text-transform: uppercase;
-            text-align: center;
-            padding: 8px 0;
-        }
+        .students-list {
+            display: flex;
+            flex-direction: column;
+            font-family: 'JetBrains Mono', monospace;
+            width: 500px;
 
-        ul {
-            width: 100%;
-            list-style: none;
-            padding: 0;
-
-            li>div {
-                display: flex;
-                background-color: rgba(0, 0, 0, .7);
-                margin: 4px 0;
-                color: white;
+            .header {
+                background-color: white;
                 text-transform: uppercase;
-                padding: 6px;
-                align-items: center;
+                text-align: center;
+                padding: 8px 0;
+            }
 
-                &:hover {
-                    background-color: #de2d00;
-                    cursor: pointer;
-                }
+            ul {
+                width: 100%;
+                list-style: none;
+                padding: 0;
 
-                .s-badge {
-                    color: black;
-                    padding: 1px 4px;
-                    margin-right: 10px;
-                    background-color: #F49FBC;
+                li>div {
+                    display: flex;
+                    background-color: rgba(0, 0, 0, .7);
+                    margin: 4px 0;
+                    color: white;
+                    text-transform: uppercase;
+                    padding: 6px;
+                    align-items: center;
 
-                    &.m {
-                        background-color: #5CB8FF;
+                    &:hover {
+                        background-color: #de2d00;
+                        cursor: pointer;
+                    }
+
+                    .s-badge {
+                        color: black;
+                        padding: 1px 4px;
+                        margin-right: 10px;
+                        background-color: #F49FBC;
+
+                        &.m {
+                            background-color: #5CB8FF;
+                        }
                     }
                 }
             }
         }
-    }
 
-    .student-picture {
-        width: 300px;
-        max-width: 300px;
-        opacity: 0.75;
+        .student-picture {
+            width: 300px;
+            max-width: 300px;
+            opacity: 0.75;
 
-        img {
-            width: 100%;
-            filter: blur(0.5px);
+            img {
+                width: 100%;
+                filter: blur(0.5px);
+            }
         }
     }
 }
