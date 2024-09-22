@@ -1,5 +1,5 @@
 import { createTRPCClient, httpBatchLink } from "@trpc/client";
-import type { AppRouter } from "../../work-school-simulator-backend/main";
+import type { AppRouter } from "../../work-school-simulator-backend/src/router";
 
 export const trpc = createTRPCClient<AppRouter>({
   links: [

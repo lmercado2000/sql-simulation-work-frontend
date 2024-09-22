@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { createSignal, For } from "solid-js";
 import clsx from "clsx";
 
 const [hoveringMale, setHoveringMale] = createSignal<boolean>(false);
@@ -19,7 +19,7 @@ function StudentItem({ name, male }: StudentItemProps) {
   );
 }
 
-export default function First() {
+export default function First(props) {
   return (
     <div class="main-body">
       <div class="content-container">
@@ -27,18 +27,11 @@ export default function First() {
         <div class="students-list">
           <p class="header">name</p>
           <ul>
-            <StudentItem name="miller" male />
-            <StudentItem name="eagle" male />
-            <StudentItem name="cabbage" />
-            <StudentItem name="peccary" />
-            <StudentItem name="ostrich" />
-            <StudentItem name="cabbage white" />
-            <StudentItem name="eagle white" male />
-            <StudentItem name="herring" male />
-            <StudentItem name="shark" />
-            <StudentItem name="paz" />
-            <StudentItem name="eland" male />
-            <StudentItem name="skink" male />
+            <For each={props.studentsData}>
+              {(student) => (
+                <StudentItem name={student.first_name} male={student.sex} />
+              )}
+            </For>
           </ul>
         </div>
         <div class="student-picture">

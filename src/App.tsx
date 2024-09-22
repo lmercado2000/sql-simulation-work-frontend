@@ -5,13 +5,22 @@ import { trpc } from "./trpc";
 import "./main.scss";
 
 function App() {
-  const [count, setCount] = createSignal(0);
+  const [studentsData, setStudentsData] = createSignal<any[]>([]);
+
   async function get() {
-    const res = await trpc.userList.query();
-    console.log(res);
+    const res = await trpc.allStudents.query();
+    setStudentsData(res);
   }
 
-  return <First />;
+  get();
+
+  console.log(studentsData());
+
+  return (
+    <div class="app-container">
+      <First studentsData={studentsData()} />{" "}
+    </div>
+  );
 }
 
 export default App;
