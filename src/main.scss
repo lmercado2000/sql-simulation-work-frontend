@@ -17,6 +17,7 @@ body {
 
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 
 
 .app-container {
@@ -31,7 +32,6 @@ body {
         position: relative;
         width: 100%;
         height: 100%;
-        padding: 100px;
 
         &::before {
             width: 100%;
@@ -51,8 +51,6 @@ body {
             filter: blur(3px);
         }
 
-
-
         .bg-logo {
             pointer-events: none;
             position: absolute;
@@ -64,7 +62,21 @@ body {
             z-index: 0;
         }
 
+        .area-title {
+            font-family: 'Kdam Thmor Pro', sans-serif;
+            text-transform: uppercase;
+            font-size: 2em;
+            color: white;
+            background-color: black;
+            width: fit-content;
+            padding: 0px 5px;
+            margin-left: 40px;
+            margin-top: 40px;
+            display: inline-block;
+        }
+
         .content-container {
+            padding: 100px;
             display: flex;
 
             .students-list {

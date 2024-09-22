@@ -26,6 +26,7 @@ type Props = {
 export default function First(props: Props) {
   return (
     <div class="main-body">
+      <div class="area-title">Students</div>
       <div class="content-container">
         <img src="/src/assets/logo.svg" class="bg-logo" alt="logo" />
         <div class="students-list">
