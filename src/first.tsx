@@ -37,6 +37,9 @@ export default function First() {
           </li>
         </ul>
       </div>
+      <div class="student-picture">
+        <img src="/src/assets/E-M-2.png" alt="logo" />
+      </div>
     </div>
   );
 }

@@ -26,6 +26,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 
     &::before {
         width: 100%;
@@ -45,7 +46,8 @@ body {
         filter: blur(3px);
     }
 
-    overflow: hidden;
+    display: flex;
+
 
     .bg-logo {
         pointer-events: none;
@@ -55,6 +57,7 @@ body {
         transform: translate(-50%, -50%) skew(-10deg, -5deg);
         height: 120%;
         opacity: 0.075;
+        z-index: 0;
     }
 
     .students-list {
@@ -101,6 +104,17 @@ body {
                     }
                 }
             }
+        }
+    }
+
+    .student-picture {
+        width: 300px;
+        max-width: 300px;
+        opacity: 0.75;
+
+        img {
+            width: 100%;
+            filter: blur(0.5px);
         }
     }
 }
