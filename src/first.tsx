@@ -31,7 +31,13 @@ export default function First(props: Props) {
         <div class="students-list">
           <p class="header">name</p>
           <ul>
-            <For each={props.studentsData}>
+            <For
+              each={props.studentsData.sort((a, b) =>
+                a.first_name
+                  .toLowerCase()
+                  .localeCompare(b.first_name.toLowerCase())
+              )}
+            >
               {(student) => (
                 <StudentItem name={student.first_name} male={student.sex} />
               )}
