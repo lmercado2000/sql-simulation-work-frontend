@@ -1,6 +1,6 @@
 import { createSignal, For } from "solid-js";
 import clsx from "clsx";
-
+import { RouterOutput } from "./trpc";
 const [hoveringMale, setHoveringMale] = createSignal<boolean>(false);
 
 type StudentItemProps = {
@@ -19,7 +19,11 @@ function StudentItem({ name, male }: StudentItemProps) {
   );
 }
 
-export default function First(props) {
+type Props = {
+  studentsData: RouterOutput["allStudents"];
+};
+
+export default function First(props: Props) {
   return (
     <div class="main-body">
       <div class="content-container">

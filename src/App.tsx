@@ -1,11 +1,13 @@
 import { createSignal } from "solid-js";
 import "./App.css";
 import First from "./first";
-import { trpc } from "./trpc";
+import { RouterOutput, trpc } from "./trpc";
 import "./main.scss";
 
 function App() {
-  const [studentsData, setStudentsData] = createSignal<any[]>([]);
+  const [studentsData, setStudentsData] = createSignal<
+    RouterOutput["allStudents"]
+  >([]);
 
   async function get() {
     const res = await trpc.allStudents.query();
@@ -13,8 +15,6 @@ function App() {
   }
 
   get();
-
-  console.log(studentsData());
 
   return (
     <div class="app-container">
