@@ -12,7 +12,7 @@ function StudentItem({ name, male }: StudentItemProps) {
   return (
     <li onMouseEnter={() => setHoveringMale(male ?? false)}>
       <div>
-        <span class={clsx("s-badge", male && "m")}>M</span>
+        <span class={clsx("s-badge", male && "m")}>{male ? "M" : "F"}</span>
         <p>{name}</p>
       </div>
     </li>
